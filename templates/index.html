@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>温度提取工具</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f6f8fa; }
+        h2 { color: #333; }
+        label { display: block; margin-top: 20px; font-weight: bold; }
+        input[type="file"], input[type="text"] {
+            margin-top: 5px;
+            padding: 8px;
+            width: 300px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>温度提取工具 (Web版)</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="csv1">上传 BC1 CSV 文件：</label>
+        <input type="file" id="csv1" name="csv1" required>
+
+        <label for="csv2">上传 BC2 CSV 文件：</label>
+        <input type="file" id="csv2" name="csv2" required>
+
+        <label for="start_time">起始时间 (例如 08:31:00)：</label>
+        <input type="text" id="start_time" name="start_time" value="08:31:00" required>
+
+        <label for="end_time">结束时间 (例如 08:50:00)：</label>
+        <input type="text" id="end_time" name="end_time" value="08:50:00" required>
+
+        <input type="submit" value="提取并下载结果">
+    </form>
+</body>
+</html>
