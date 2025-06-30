@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>温度提取工具</title>
+</head>
+<body>
+    <h2>上传两个 CSV 文件并设定时间段</h2>
+    <form method="post" enctype="multipart/form-data">
+        <label for="file_bc1">BC1 CSV 文件：</label>
+        <input type="file" name="file_bc1" id="file_bc1" required><br><br>
+
+        <label for="file_bc2">BC2 CSV 文件：</label>
+        <input type="file" name="file_bc2" id="file_bc2" required><br><br>
+
+        <label for="start_time">起始时间 (HH:MM:SS)：</label>
+        <input type="text" name="start_time" id="start_time" value="08:31:00"><br><br>
+
+        <label for="end_time">结束时间 (HH:MM:SS)：</label>
+        <input type="text" name="end_time" id="end_time" value="08:50:00"><br><br>
+
+        <input type="submit" value="提交分析">
+    </form>
+</body>
+</html>
